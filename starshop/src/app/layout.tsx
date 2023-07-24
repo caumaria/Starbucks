@@ -1,7 +1,7 @@
 import "./globals.css";
 import type { Metadata } from "next";
 import localFont from "next/font/local";
-import Navbar from "./components/Navbar";
+import Navbar from "./components/Header/Navbar";
 import StyledComponentsRegistry from "../../lib/registry";
 
 const myFont = localFont({ src: "../../public/sodosans.woff2" });

@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 interface ContainerProps {
-  height?: number;
+  height?: string;
   children?: React.ReactNode;
 }
 
@@ -9,12 +9,14 @@ const Containers = styled.section<ContainerProps>`
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
   width: 100%;
-  height: ${props => `${props.height}px`};
+  padding: 0 1rem;
+  height: ${(props) => (props.height ? `${props.height}px` : "auto")};
 `;
 
 const Container: React.FC<ContainerProps> = ({ ...props }) => {
-  return <Containers>{props.children}</Containers>;
+  return <Containers height={props.height}>{props.children}</Containers>;
 };
 
 export default Container;

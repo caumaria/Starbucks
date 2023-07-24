@@ -1,9 +1,9 @@
 "use client";
 import Link from "next/link";
 import Image from "next/image";
-import Logo from "../../../public/logo.png";
-import Cart from '../../../public/minicart.svg'
-import Search from '../../../public/search-icon.svg'
+import Logo from "../../../../public/logo.png"
+import Cart from '../../../../public/minicart.svg'
+import Search from '../../../../public/search-icon.svg'
 import Header from "./Header";
 
 
