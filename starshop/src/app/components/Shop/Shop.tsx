@@ -8,24 +8,27 @@ export interface ShopProps {}
 
 const CardContainer = styled.section`
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(320px, 320px));
   align-items: center;
   justify-content: center;
   max-width: 1440px;
   width: 100%;
   padding: 0 1rem;
   margin: 2.5rem auto;
+  gap: 1rem;
 `;
 
 export default function Shop(props: ShopProps) {
   return (
-    <Container background={'#f2f0eb'}>
+    <Container background={"#f2f0eb"}>
       <CardContainer>
-        {items.map((item) => (
-          <div key={item.id}>
-            <ProductCard {...item} />
-          </div>
-        ))}
+        
+          {items.map((item) => (
+            <Container width={'320px'} key={item.id}>
+              <ProductCard {...item} />
+            </Container>
+          ))}
+        
       </CardContainer>
     </Container>
   );
