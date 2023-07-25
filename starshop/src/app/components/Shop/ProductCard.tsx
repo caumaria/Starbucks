@@ -1,6 +1,8 @@
 import * as React from "react";
 import styled from "styled-components";
 import Button from "../Button";
+import { ButtonsContainer, Card, CounterContainer } from "./CardStyle";
+import { useCart } from "@/app/context/CartContext";
 
 
 type StoreItemProps = {
@@ -10,76 +12,17 @@ type StoreItemProps = {
   imgUrl: string;
 };
 
-const Card = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
 
-  p {
-    font-size: 16px;
-    color: var(--main-green);
-    text-align: center;
-    margin: 6px 0;
-    word-wrap: break-word;
-    letter-spacing: 0.02em;
-  }
-  img {
-    max-width: 100%;
-    height: auto;
-    border: 0;
-  }
-`;
+export default function ProductCard({  id,  name,  price,  imgUrl,}: StoreItemProps) {
 
-const ButtonsContainer = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.3rem;
-  margin: 1rem 0;
+  const {
+    getItemQuantity,
+    increaseQuantity,
+    decreaseQuantity
+  } = useCart();
 
-  span {
-    position: relative;
-    font-size: 14px;
-    right: 19%;
-    color: var(--secondary-green);
-  }
-`;
+  const quantity = getItemQuantity(id);
 
-const CounterContainer = styled.div`
-  gap: 1.4rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--secondary-green);
-    min-width: 26px;
-    height: 26px;
-    border-radius: 20px;
-    border: 1px solid var(--secondary-green);
-
-    font-size: 14px;
-    font-weight: bold;
-    background: transparent;
-    line-height: 30px;
-  }
-  :hover {
-    background-color: var(--secondary-green);
-    color: white;
-  }
-`;
-
-
-
-export default function ProductCard({
-  id,
-  name,
-  price,
-  imgUrl,
-}: StoreItemProps) {
   return (
     <Card>
       <div>
@@ -92,11 +35,11 @@ export default function ProductCard({
 
         <ButtonsContainer>
           <CounterContainer>
-            <button>-</button>
-            <button>+</button>
+            <button onClick={() => decreaseQuantity(id)}>-</button>
+            <button onClick={() => increaseQuantity(id)} >+</button>
           </CounterContainer>
-          <span>1</span>
-          <Button>Adicionar</Button>
+          <span>{quantity}</span>
+          <Button onClick={() => increaseQuantity(id)}>Adicionar</Button>
         </ButtonsContainer>
       </div>
     </Card>
