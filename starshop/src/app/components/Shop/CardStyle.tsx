@@ -15,7 +15,7 @@ export const Card = styled.div`
     letter-spacing: 0.02em;
   }
   img {
-    max-width: 100%;
+    margin: 0 30px;
     height: auto;
     border: 0;
   }
@@ -35,7 +35,7 @@ export const ButtonsContainer = styled.div`
     width: 10px;
     position: relative;
     font-size: 14px;
-    right: 20.5%;
+    right: 19%;
     color: var(--secondary-green);
   }
 `;

@@ -8,7 +8,7 @@ export interface ShopProps {}
 
 const CardContainer = styled.section`
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 320px));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 300px));
   align-items: center;
   justify-content: center;
   max-width: 1440px;
@@ -24,7 +24,7 @@ export default function Shop(props: ShopProps) {
       <CardContainer>
         
           {items.map((item) => (
-            <Container width={'320px'} key={item.id}>
+            <Container width={'300px'} key={item.id}>
               <ProductCard {...item} />
             </Container>
           ))}
