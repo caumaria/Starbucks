@@ -1,16 +1,27 @@
 "use client";
+
 import Link from "next/link";
 import Image from "next/image";
 import Logo from "../../../../public/logo.png";
 import Search from "../../../../public/search-icon.svg";
-import Header from "./Header";
-import Cart from "./Cart";
+import CartIcon from "../../../../public/minicart.svg";
 import Container from "../Container";
+import styled from "styled-components";
+import { useCart } from "@/app/context/CartContext";
+import { HeaderContainer } from "./Header";
+
+const CartButton = styled.button`
+  background-color: none;
+  border: none;
+`;
 
 export default function Navbar() {
+  const { openCart, cartQuantity } = useCart()
+
+
   return (
     <Container>
-      <Header>
+      <HeaderContainer>
         <ul>
           <div>
             <Link href="/">Explore nossos Cafés</Link>
@@ -31,14 +42,19 @@ export default function Navbar() {
               Pesquisar
               <Image src={Search} alt="Search Icon"></Image>
             </Link>
-            <Cart />
+
+            <CartButton onClick={openCart}>
+              <Image src={CartIcon} alt="Shopping Cart"></Image>
+             {cartQuantity}            
+            </CartButton>
+
             <>
               <Link href="/login">Entrar</Link>
               <Link href="/register">Registrar</Link>
             </>
           </div>
         </ul>
-      </Header>
+      </HeaderContainer>
     </Container>
   );
 }

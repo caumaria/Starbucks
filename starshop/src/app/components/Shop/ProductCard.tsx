@@ -1,5 +1,4 @@
 import * as React from "react";
-import styled from "styled-components";
 import Button from "../Button";
 import { ButtonsContainer, Card, CounterContainer } from "./CardStyle";
 import { useCart } from "@/app/context/CartContext";
@@ -8,12 +7,16 @@ import { useCart } from "@/app/context/CartContext";
 type StoreItemProps = {
   id: number;
   name: string;
-  price: string;
+  price: number;
   imgUrl: string;
 };
 
 
-export default function ProductCard({  id,  name,  price,  imgUrl,}: StoreItemProps) {
+export default function ProductCard({  
+  id,  
+  name,  
+  price,  
+  imgUrl,}: StoreItemProps) {
 
   const {
     getItemQuantity,

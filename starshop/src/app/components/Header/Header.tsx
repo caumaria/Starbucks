@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const HeaderContainer = styled.header`
+export const HeaderContainer = styled.header`
   width: 100%;
   max-width: 1440px;
   ul {
@@ -20,13 +20,3 @@ const HeaderContainer = styled.header`
     }
   }
 `;
-
-const Header = ({ ...props }) => {
-  return (
-    <HeaderContainer className={props.className}>
-      {props.children}
-    </HeaderContainer>
-  );
-};
-
-export default Header;
