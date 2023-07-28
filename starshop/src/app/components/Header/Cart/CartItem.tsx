@@ -1,5 +1,5 @@
 import { useCart } from "@/app/context/CartContext"
-import items from '../../data/items.json'
+import items from '../../../data/items.json'
 import { CartItemContainer } from "./CartItemStyle"
 
 

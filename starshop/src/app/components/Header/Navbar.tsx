@@ -12,7 +12,6 @@ import Cart from "./Cart/Cart";
 
 export default function Navbar() {
 
-
   return (
     <Container>
       <HeaderContainer>
@@ -38,7 +37,6 @@ export default function Navbar() {
             </Link>
 
             <Cart></Cart>
-
             <>
               <Link href="/login">Entrar</Link>
               <Link href="/register">Registrar</Link>
