@@ -5,32 +5,21 @@ import items from "../../data/items.json";
 import { CartItem } from "./CartItem";
 import styled from "styled-components";
 import { ShoppingContainer } from "./ShoppingCartStyle";
-import { useEffect, useRef } from "react";
+
 
 type ShoppingCartProps = {
-  isOpen: boolean;
+    setOpen: boolean;
 };
 
-export function ShoppingCart({ isOpen }: ShoppingCartProps) {
-  const { closeCart, cartItems } = useCart();
 
-  const ref = useRef<HTMLDivElement>(null);
+export function ShoppingCart({ setOpen }: ShoppingCartProps) {
+  const { cartItems } = useCart();
 
-  useEffect(() => {
-    const handleClickOutside = (event: MouseEvent) => {
-      if (ref.current && !ref.current.contains(event.target as Node)) {
-        closeCart();
-      }
-    };
-    document.addEventListener('click', handleClickOutside);
 
-    return () => {
-      document.removeEventListener('click', handleClickOutside);
-    };
-  }, [closeCart]);
 
   return (
-    <ShoppingContainer ref={ref}>
+    <ShoppingContainer
+    >
       <header>
         <h4>Cart</h4>
       </header>

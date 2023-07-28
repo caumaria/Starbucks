@@ -4,19 +4,13 @@ import Link from "next/link";
 import Image from "next/image";
 import Logo from "../../../../public/logo.png";
 import Search from "../../../../public/search-icon.svg";
-import CartIcon from "../../../../public/minicart.svg";
 import Container from "../Container";
-import styled from "styled-components";
-import { useCart } from "@/app/context/CartContext";
 import { HeaderContainer } from "./Header";
+import Cart from "./Cart/Cart";
 
-const CartButton = styled.button`
-  background-color: none;
-  border: none;
-`;
+
 
 export default function Navbar() {
-  const { openCart, cartQuantity } = useCart()
 
 
   return (
@@ -43,10 +37,7 @@ export default function Navbar() {
               <Image src={Search} alt="Search Icon"></Image>
             </Link>
 
-            <CartButton onClick={openCart}>
-              <Image src={CartIcon} alt="Shopping Cart"></Image>
-             {cartQuantity}            
-            </CartButton>
+            <Cart></Cart>
 
             <>
               <Link href="/login">Entrar</Link>
