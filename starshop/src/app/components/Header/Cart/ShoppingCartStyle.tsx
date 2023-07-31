@@ -6,7 +6,8 @@ export const ShoppingContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 400px;
+  max-width: 460px;
+  width: 100%;
   height: 100vh;
   right: 0;
   top: 0;
@@ -37,5 +38,6 @@ export const CardWrapper = styled.div`
   display: inline-block;
   height: calc(100vh - 250px) !important;
   margin: 0 !important;
+  gap: 1rem;
   
 `;
