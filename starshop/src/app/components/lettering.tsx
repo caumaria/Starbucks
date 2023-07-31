@@ -9,7 +9,7 @@ const TextStyle = styled.p<TextProps>`
   font-size: 14px;
   letter-spacing: 0.02em;
   line-height: 30px;
-  margin: 0 18px 0 7px;
+  margin: 1rem;
 
   :hover {
     border-bottom: solid 2px #006241;

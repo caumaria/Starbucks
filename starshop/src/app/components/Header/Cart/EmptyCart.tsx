@@ -28,7 +28,7 @@ export default function EmptyCart() {
     <EmptyCartContainer>
       <h1>Meu Carrinho</h1>
 
-      <Container>
+      <Container height="80%">
         <Image src={EmptyCartImage} alt=""></Image>
         <Text>
           O seu carrinho ainda está vazio, que tal adicionar alguns itens?

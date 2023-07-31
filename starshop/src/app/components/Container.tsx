@@ -12,7 +12,7 @@ const Containers = styled.div<ContainerProps>`
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  width: ${(props) => (props.width ? `${props.width}` : "100%")};;
+  width: ${(props) => (props.width ? `${props.width}` : "100%")};
   padding: 0 1rem;
   height: ${(props) => (props.height ? `${props.height}` : "auto")};
   background: ${(props) => (props.background ? `${props.background}` : "inherit")};
