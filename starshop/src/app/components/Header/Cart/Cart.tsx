@@ -5,7 +5,7 @@ import CartIcon from "../../../../../public/minicart.svg";
 import styled from "styled-components";
 import { ShoppingCart } from "./ShoppingCart";
 import { useState, useEffect, useRef } from "react";
-import EmptyCart from "./EmptyCart";
+
 
 
 const CartButton = styled.button`

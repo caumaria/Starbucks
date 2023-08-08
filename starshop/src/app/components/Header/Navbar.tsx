@@ -1,49 +1,81 @@
 "use client";
-
-import Link from "next/link";
-import Image from "next/image";
-import Logo from "../../../../public/logo.png";
-import Search from "../../../../public/search-icon.svg";
-import Container from "../Container";
-import { HeaderContainer } from "./Header";
+import HeaderContainer from "./HeaderStyle";
 import Cart from "./Cart/Cart";
+import { useEffect, useRef, useState } from "react";
+import styled from "styled-components";
+import Logo from "./Logo";
+import Menu from "./Menu/Menu";
+import CoffeSection from "./Menu/CoffeSection";
+import Login from "./Menu/Login";
+import Search from "./Search/Search";
 
-
+const Icons = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem;
+`;
 
 export default function Navbar() {
+  const [open, setOpen] = useState<boolean>(false);
+  const [isDesktop, setDesktop] = useState(false);
+
+  const ref = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const handleOutsideClick = (event: MouseEvent) => {
+      if (ref.current && !ref.current.contains(event.target as Node)) {
+        setOpen(false);
+      }
+    };
+    document.addEventListener("click", handleOutsideClick, true);
+    return () => {
+      document.removeEventListener("click", handleOutsideClick, true);
+    };
+  }, []);
+
+  useEffect(() => {
+    if (window.innerWidth > 1000) {
+      setDesktop(true);
+    } else {
+      setDesktop(false);
+    }
+    const updateMedia = () => {
+      if (window.innerWidth > 1000) {
+        setDesktop(true);
+      } else {
+        setDesktop(false);
+      }
+    };
+    window.addEventListener("resize", updateMedia);
+    return () => window.removeEventListener("resize", updateMedia);
+  }, []);
 
   return (
-    <Container>
-      <HeaderContainer>
-        <ul>
-          <div>
-            <Link href="/">Explore nossos Cafés</Link>
-            <Link href="/recipe">Receitas</Link>
-            <Link href="/knowmore">Saiba mais</Link>
-          </div>
+    <div ref={ref}>
+      <HeaderContainer open={open}>
+        <CoffeSection />
 
-          <Link href="/">
-            <Image
-              src={Logo}
-              alt="logo Starbucks"
-              style={{ marginTop: ".2rem" }}
-            ></Image>
-          </Link>
+        {isDesktop ? (
+          <>
+            <Logo />
+            <Search />
+          </>
+        ) : (
+          <>
+            <Search />
+            <Logo />
+          </>
+        )}
 
-          <div>
-            <Link href="/search">
-              Pesquisar
-              <Image src={Search} alt="Search Icon"></Image>
-            </Link>
+        <Icons>
+          <Cart></Cart>
+          <Menu />
+        </Icons>
 
-            <Cart></Cart>
-            <>
-              <Link href="/login">Entrar</Link>
-              <Link href="/register">Registrar</Link>
-            </>
-          </div>
-        </ul>
+        <Login />
       </HeaderContainer>
-    </Container>
+    </div>
   );
 }
