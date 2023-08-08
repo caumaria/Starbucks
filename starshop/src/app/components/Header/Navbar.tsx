@@ -1,21 +1,12 @@
 "use client";
 import HeaderContainer from "./HeaderStyle";
-import Cart from "./Cart/Cart";
 import { useEffect, useRef, useState } from "react";
-import styled from "styled-components";
 import Logo from "./Logo";
-import Menu from "./Menu/Menu";
 import CoffeSection from "./Menu/CoffeSection";
 import Login from "./Menu/Login";
 import Search from "./Search/Search";
+import IconsContainer from "./Menu/IconsContainer";
 
-const Icons = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem;
-  padding: 1rem;
-`;
 
 export default function Navbar() {
   const [open, setOpen] = useState<boolean>(false);
@@ -69,10 +60,7 @@ export default function Navbar() {
           </>
         )}
 
-        <Icons>
-          <Cart></Cart>
-          <Menu />
-        </Icons>
+        <IconsContainer />
 
         <Login />
       </HeaderContainer>
