@@ -8,7 +8,11 @@ interface MenuOpenProps {
   setOpen: (value: boolean) => void;
 }
 
-const MenuContainer = styled.div<MenuOpenProps>`
+interface MenuContainerProps {
+  open: boolean;
+}
+
+const MenuContainer = styled.div<MenuContainerProps>`
   height: 100vh;
   background-color: #f2f0eb;
   display: flex;
@@ -23,7 +27,6 @@ const MenuContainer = styled.div<MenuOpenProps>`
   @media (max-width: 1000px) {
     width: 100%;
   }
-
 `;
 
 export default function MenuOpen({ open, setOpen }: MenuOpenProps) {
@@ -35,7 +38,8 @@ export default function MenuOpen({ open, setOpen }: MenuOpenProps) {
       <p>receitas</p>
       <p>saiba mais</p>
       <p>Minha conta</p>
-      Entrar Registrar
+      <p>Entrar</p>
+      <p>Registrar</p>
       <Button>Compre Aqui</Button>
     </MenuContainer>
   );

@@ -22,6 +22,7 @@ const RightContainer = styled.div`
   align-items: center;
   justify-content: end;
   width: 100%;
+  padding-right: 1rem;
 `;
 
 export default function Navbar() {

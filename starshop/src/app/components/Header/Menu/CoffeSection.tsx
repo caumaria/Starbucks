@@ -7,6 +7,7 @@ const CoffeContainer = styled.div`
   align-items: center;
   justify-content: start;
   width: 100%;
+  padding-left: 1rem;
 
   @media (max-width: 1000px) {
     display: none;

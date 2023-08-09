@@ -3,11 +3,13 @@ import styled from "styled-components";
 
 const MenuContainer = styled.div`
   display: none;
+  padding-right: 1rem;
 
   @media (max-width: 1000px) {
     display: block;
   }
 `;
+
 
 const StyledBurger = styled.button<{ open: boolean }>`
   display: flex;
