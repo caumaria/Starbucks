@@ -8,7 +8,7 @@ const SearchContainer = styled.div`
   padding: 0;
 
   @media (max-width: 1000px) {
-    width: 130px;
+    width: 100px;
     span {
       display: none;
     }

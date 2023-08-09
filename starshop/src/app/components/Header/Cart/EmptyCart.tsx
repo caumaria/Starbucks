@@ -6,6 +6,7 @@ import EmptyCartImage from "./empty-minicart.png";
 import Container from "../../Container";
 import styled from "styled-components";
 
+
 const EmptyCartContainer = styled.section`
   height: 100vh;
 
@@ -22,7 +23,6 @@ const EmptyCartContainer = styled.section`
   }
 `;
 
-
 export default function EmptyCart() {
   return (
     <EmptyCartContainer>
@@ -33,7 +33,9 @@ export default function EmptyCart() {
         <Text>
           O seu carrinho ainda está vazio, que tal adicionar alguns itens?
         </Text>
-        <Button>Explore nossos Cafés</Button>
+        <Button>
+          Explore nossos Cafés
+        </Button>
       </Container>
     </EmptyCartContainer>
   );
