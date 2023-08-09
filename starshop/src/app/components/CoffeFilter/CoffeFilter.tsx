@@ -8,7 +8,7 @@ export interface CoffeFilterProps {}
 export default function CoffeFilter(props: CoffeFilterProps) {
   return (
     <>
-      <Container height={"150px"}>
+      <Container height={"200px"}>
         <Title>Busque seu Café</Title>
       </Container>
       <Filter />

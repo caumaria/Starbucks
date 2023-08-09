@@ -7,6 +7,9 @@ import { ShoppingCart } from "./ShoppingCart";
 import { useState, useEffect, useRef } from "react";
 
 
+const CartContainer = styled.div`
+  padding: 0;
+`;
 
 const CartButton = styled.button`
   background-color: white;
@@ -47,7 +50,7 @@ export default function Cart() {
   }, []);
 
   return (
-    <div ref={ref}>
+    <CartContainer ref={ref}>
       <CartButton onClick={() => setOpen(!open)}>
         <Image src={CartIcon} alt="Shopping Cart"></Image>
         {cartQuantity > 0 ? (
@@ -59,6 +62,6 @@ export default function Cart() {
       <ShoppingCart /> 
       : null}
 
-    </div>
+    </CartContainer>
   );
 }

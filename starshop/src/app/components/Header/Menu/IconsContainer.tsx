@@ -11,6 +11,8 @@ const Icons = styled.div`
   justify-content: center;
   gap: 1rem;
   padding: 1rem;
+  margin-top: 0.3rem;
+  width: 100px;
 `;
 
 export default function IconsContainer() {

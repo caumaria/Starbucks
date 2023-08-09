@@ -4,15 +4,17 @@ import LogoStarbucks from "../../../../public/logo.png";
 import Link from "next/link";
 import styled from "styled-components";
 
+const LogoContainer = styled.div`
+
+
+`;
 
 export default function Logo() {
   return (
+    <LogoContainer>
       <Link href="/">
-        <Image
-          src={LogoStarbucks}
-          alt="logo Starbucks"
-          style={{ marginTop: ".2rem" }}
-        ></Image>
+        <Image src={LogoStarbucks} alt="logo Starbucks"></Image>
       </Link>
+    </LogoContainer>
   );
 }

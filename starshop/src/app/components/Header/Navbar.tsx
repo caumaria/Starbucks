@@ -6,7 +6,23 @@ import CoffeSection from "./Menu/CoffeSection";
 import Login from "./Menu/Login";
 import Search from "./Search/Search";
 import IconsContainer from "./Menu/IconsContainer";
+import styled from "styled-components";
+import { CenterDiv, FixedDiv } from "../Center";
 
+const NavbarContainer = styled.header`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0.7rem;
+  width: 100vw;
+`;
+
+const RightContainer = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  width: 100%;
+`;
 
 export default function Navbar() {
   const [open, setOpen] = useState<boolean>(false);
@@ -44,26 +60,35 @@ export default function Navbar() {
   }, []);
 
   return (
-    <div ref={ref}>
+    <NavbarContainer ref={ref}>
       <HeaderContainer open={open}>
-        <CoffeSection />
-
         {isDesktop ? (
           <>
+            <FixedDiv>
+              <CoffeSection />
+            </FixedDiv>
             <Logo />
-            <Search />
+            <FixedDiv>
+              <RightContainer>
+                <Search />
+                <IconsContainer />
+                <Login />
+              </RightContainer>
+            </FixedDiv>
           </>
         ) : (
           <>
-            <Search />
+            <CenterDiv>
+              <Search />
+            </CenterDiv>
             <Logo />
+            <CenterDiv>
+              <IconsContainer />
+              <Login />
+            </CenterDiv>
           </>
         )}
-
-        <IconsContainer />
-
-        <Login />
       </HeaderContainer>
-    </div>
+    </NavbarContainer>
   );
 }

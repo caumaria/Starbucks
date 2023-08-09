@@ -5,7 +5,8 @@ import styled from "styled-components";
 const CoffeContainer = styled.div`
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: start;
+  width: 100%;
 
   @media (max-width: 1000px) {
     display: none;

@@ -6,8 +6,8 @@ interface HeaderContainerProps {
 }
 
 const StyledHeaderContainer = styled.div<HeaderContainerProps>`
-  width: 100%;
   max-width: 1440px;
+  width: 100%;  
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -15,10 +15,10 @@ const StyledHeaderContainer = styled.div<HeaderContainerProps>`
 
   a {
     text-decoration: none;
-    margin: 0 0.8rem;
     color: var(--main-green);
     font-size: 18px;
     cursor: pointer;
+    margin: 0 .5rem;
 
     img {
       margin: -0.1rem 0.5rem;
