@@ -4,12 +4,12 @@ import styled from "styled-components";
 import MenuButton from "./MenuButton";
 
 interface MenuOpenProps {
-  open: boolean;
-  setOpen: (value: boolean) => void;
+  openMenu: boolean;
+  setOpenMenu: (value: boolean) => void;
 }
 
 interface MenuContainerProps {
-  open: boolean;
+  openMenu: boolean;
 }
 
 const MenuContainer = styled.div<MenuContainerProps>`
@@ -19,7 +19,7 @@ const MenuContainer = styled.div<MenuContainerProps>`
   align-items: center;
   flex-direction: column;
   transition: transform 0.3s ease-in-out;
-  transform: ${({ open }) => (open ? "translateX(0)" : "translateX(-100%)")};
+  transform: ${({ openMenu }) => (openMenu ? "translateX(0)" : "translateX(-100%)")};
   position: absolute;
   top: 0;
   left: 0;
@@ -29,10 +29,10 @@ const MenuContainer = styled.div<MenuContainerProps>`
   }
 `;
 
-export default function MenuOpen({ open, setOpen }: MenuOpenProps) {
+export default function MenuOpen({ openMenu, setOpenMenu }: MenuOpenProps) {
   return (
-    <MenuContainer open={open}>
-      <MenuButton open={open} setOpen={setOpen} />
+    <MenuContainer openMenu={openMenu}>
+      <MenuButton openMenu={openMenu} setOpenMenu={setOpenMenu} />
       <p>Nossos produtos</p>
       <p>filtro</p>
       <p>receitas</p>

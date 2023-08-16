@@ -1,6 +1,8 @@
 import { useCart } from "@/app/context/CartContext";
 import items from "../../../data/items.json";
 import styled from "styled-components";
+import { CounterContainer } from "../../Shop/CardStyle";
+import { CenterDiv } from "../../Center";
 
 type CartItemProps = {
   id: number;
@@ -8,29 +10,34 @@ type CartItemProps = {
 };
 
 const CartItemContainer = styled.div`
-display: flex;
-gap: .8rem;
-font-size: .75rem;
-color: var(--main-green);
-margin: 1rem 0;
+  display: flex;
+  gap: 1rem;
+  font-size: 0.75rem;
+  color: var(--main-green);
+  margin: 1rem 0;
 
-img {
+  img {
     width: 75px;
-}
+  }
 
-button {
+  p {
+    margin: .4rem 0;
+  }
+`;
+
+const RemoveButton = styled.button`
   background-color: inherit;
   color: var(--secondary-green);
   line-height: 28px;
-  font-size: .7rem;
+  font-size: 0.7rem;
   font-weight: 550;
   border: none;
   text-decoration: underline;
-}
+  margin: 0.4rem;
 `;
 
 export function CartItem({ id, quantity }: CartItemProps) {
-  const { removeItem } = useCart();
+  const { removeItem, increaseQuantity, decreaseQuantity } = useCart();
   const item = items.find((i) => i.id === id);
 
   if (item == null) return null;
@@ -42,14 +49,21 @@ export function CartItem({ id, quantity }: CartItemProps) {
       </div>
 
       <div>
-        <strong>{item.name}</strong>
+        <b>{item.name}</b>
 
-        <div>Visualizar Detalhes v</div>
+        <p>Visualizar Detalhes v</p>
 
-        <div>
-          ${item.price}
-          <button onClick={() => removeItem(item.id)}>Remover</button>
-        </div>
+        <div>R${item.price}</div>
+        <CenterDiv>
+          <CounterContainer>
+            <button onClick={() => decreaseQuantity(id)}>-</button>
+            <button onClick={() => increaseQuantity(id)}>+</button>
+            <span>{quantity}</span>
+          </CounterContainer>
+          <RemoveButton onClick={() => removeItem(item.id)}>
+            Remover
+          </RemoveButton>
+        </CenterDiv>
       </div>
     </CartItemContainer>
   );

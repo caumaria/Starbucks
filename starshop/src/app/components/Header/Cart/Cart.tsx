@@ -59,7 +59,7 @@ export default function Cart() {
       </CartButton>
 
       {open ? 
-      <ShoppingCart /> 
+      <ShoppingCart open={open} setOpen={setOpen} /> 
       : null}
 
     </CartContainer>

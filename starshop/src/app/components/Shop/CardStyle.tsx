@@ -64,4 +64,14 @@ export const CounterContainer = styled.div`
     background-color: var(--secondary-green);
     color: white;
   }
+  span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 10px;
+    position: relative;
+    font-size: 14px;
+    right: 63%;
+    color: var(--secondary-green);
+  }
 `;

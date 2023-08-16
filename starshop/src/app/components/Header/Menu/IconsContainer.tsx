@@ -10,19 +10,18 @@ const Icons = styled.div`
   align-items: center;
   justify-content: center;
   gap: 1rem;
-  padding: 1rem;
   margin-top: 0.3rem;
   width: 100px;
 `;
 
 export default function IconsContainer() {
-  const [open, setOpen] = useState(false);
+  const [openMenu, setOpenMenu] = useState(false);
 
   return (
     <Icons>
       <Cart />
-      <MenuButton open={open} setOpen={setOpen} />
-      <MenuOpen open={open} setOpen={setOpen}/>
+      <MenuButton openMenu={openMenu} setOpenMenu={setOpenMenu} />
+      <MenuOpen openMenu={openMenu} setOpenMenu={setOpenMenu}/>
     </Icons>
   );
 }

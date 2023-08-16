@@ -10,8 +10,7 @@ const MenuContainer = styled.div`
   }
 `;
 
-
-const StyledBurger = styled.button<{ open: boolean }>`
+const StyledBurger = styled.button<{ openMenu: boolean }>`
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -35,29 +34,29 @@ const StyledBurger = styled.button<{ open: boolean }>`
   }
 
   :first-child {
-    transform: ${({ open }) => (open ? "rotate(45deg)" : "rotate(0)")};
+    transform: ${({ openMenu }) => (openMenu ? "rotate(45deg)" : "rotate(0)")};
   }
 
   :nth-child(2) {
-    opacity: ${({ open }) => (open ? "0" : "1")};
-    transform: ${({ open }) => (open ? "translateX(20px)" : "translateX(0)")};
+    opacity: ${({ openMenu }) => (openMenu ? "0" : "1")};
+    transform: ${({ openMenu }) => (openMenu ? "translateX(20px)" : "translateX(0)")};
   }
 
   :nth-child(3) {
-    transform: ${({ open }) => (open ? "rotate(-45deg)" : "rotate(0)")};
+    transform: ${({ openMenu }) => (openMenu ? "rotate(-45deg)" : "rotate(0)")};
   }
 `;
 
 export default function MenuButton({
-  open,
-  setOpen,
+  openMenu,
+  setOpenMenu,
 }: {
-  open: boolean;
-  setOpen: (value: boolean) => void;
+  openMenu: boolean;
+  setOpenMenu: (value: boolean) => void;
 }) {
   return (
     <MenuContainer>
-      <StyledBurger open={open} onClick={() => setOpen(!open)}>
+      <StyledBurger openMenu={openMenu} onClick={() => setOpenMenu(!openMenu)}>
         <div />
         <div />
         <div />

@@ -34,7 +34,7 @@ export default function ProductCard({
       <div>
         <p>{name}</p>
         <p>★★★★★ (0)</p>
-        <p>{price}</p>
+        <p>RS{price}</p>
 
         <ButtonsContainer>
           <CounterContainer>

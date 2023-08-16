@@ -1,18 +1,24 @@
 "use client";
 
 import { useCart } from "@/app/context/CartContext";
-import items from "../../../data/items.json";
 import { CartItem } from "./CartItem";
 import { CardWrapper, ShopContainer, ShoppingContainer } from "./ShoppingCartStyle";
 import EmptyCart from "./EmptyCart";
+import ShoppingCartTotal from "./ShoppingCartTotal";
 
-export function ShoppingCart() {
+export function ShoppingCart({
+  open,
+  setOpen,
+}: {
+  open: boolean;
+  setOpen: (value: boolean) => void;
+}) {
   const { cartItems, cartQuantity } = useCart();
 
   return (
     <ShoppingContainer>
       {
-        cartQuantity === 0 ? <EmptyCart /> :
+        cartQuantity === 0 ? <EmptyCart open={open} setOpen={setOpen}/> :
       <>
         <ShopContainer>
         <div>
@@ -27,13 +33,8 @@ export function ShoppingCart() {
             ))}
           </CardWrapper>
 
-          <div>
-              Total{" "}
-              {cartItems.reduce((total, cartItem) => {
-                const item = items.find((i) => i.id === cartItem.id);
-                return total + (item?.price || 0) * cartItem.quantity;
-              }, 0)}
-            </div>
+          <ShoppingCartTotal />
+
         </div>
         </ShopContainer>
       </>}

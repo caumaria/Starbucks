@@ -3,6 +3,7 @@ import styled from "styled-components";
 export const ShoppingContainer = styled.div`
   align-items: center;
   background-color: white;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -39,5 +40,32 @@ export const CardWrapper = styled.div`
   height: calc(100vh - 250px) !important;
   margin: 0 !important;
   gap: 1rem;
-  
+`;
+
+export const CartTotal = styled.div`
+  align-items: center;
+  border-top: 1px solid lightgrey;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+  padding-top: 1rem;
+
+  section {
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+  }
+
+  button {
+    width: 90%;
+  }
+
+  a {
+    font-size: 16px;
+    color: var(--secondary-green);
+    border-bottom: 1px solid var(--secondary-green);
+  }
 `;

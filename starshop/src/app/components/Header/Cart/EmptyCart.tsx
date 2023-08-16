@@ -5,6 +5,7 @@ import Button from "../../Button";
 import EmptyCartImage from "./empty-minicart.png";
 import Container from "../../Container";
 import styled from "styled-components";
+import Link from "next/link";
 
 
 const EmptyCartContainer = styled.section`
@@ -21,9 +22,19 @@ const EmptyCartContainer = styled.section`
     color: var(--main-green);
     font-size: 16px;
   }
+
+  button {
+    margin-top: 1rem;
+  }
 `;
 
-export default function EmptyCart() {
+export default function EmptyCart({
+  open,
+  setOpen,
+}: {
+  open: boolean;
+  setOpen: (value: boolean) => void;
+}) {
   return (
     <EmptyCartContainer>
       <h1>Meu Carrinho</h1>
@@ -33,9 +44,9 @@ export default function EmptyCart() {
         <Text>
           O seu carrinho ainda está vazio, que tal adicionar alguns itens?
         </Text>
-        <Button>
-          Explore nossos Cafés
-        </Button>
+        <Link href="/">
+          <Button open={open} onClick={() => setOpen(!open)}>Explore nossos Cafés</Button>
+        </Link>
       </Container>
     </EmptyCartContainer>
   );

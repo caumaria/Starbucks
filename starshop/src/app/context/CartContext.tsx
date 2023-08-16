@@ -40,6 +40,11 @@ export function CartProvider({ children }: CartProviderProps) {
   function getItemQuantity(id: number) {
     return cartItems.find((item) => item.id === id)?.quantity || 0;
   }
+
+  {/*mudar função botao shop
+  + click adicionar zerar counter
+
+*/}
   function increaseQuantity(id: number) {
     setCartItems(currItems => {
       if (currItems.find(item => item.id === id) == null) {
