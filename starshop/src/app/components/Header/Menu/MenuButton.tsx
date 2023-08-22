@@ -1,6 +1,11 @@
 import * as React from "react";
 import styled from "styled-components";
 
+interface MenuButtonProps {
+  handleClick: () => void;
+  openMenu: boolean;
+}
+
 const MenuContainer = styled.div`
   display: none;
   padding-right: 1rem;
@@ -47,16 +52,13 @@ const StyledBurger = styled.button<{ openMenu: boolean }>`
   }
 `;
 
-export default function MenuButton({
-  openMenu,
-  setOpenMenu,
-}: {
-  openMenu: boolean;
-  setOpenMenu: (value: boolean) => void;
-}) {
+
+
+export default function MenuButton({ openMenu, handleClick }: MenuButtonProps) {
+
   return (
     <MenuContainer>
-      <StyledBurger openMenu={openMenu} onClick={() => setOpenMenu(!openMenu)}>
+      <StyledBurger openMenu={openMenu} onClick={handleClick}>
         <div />
         <div />
         <div />

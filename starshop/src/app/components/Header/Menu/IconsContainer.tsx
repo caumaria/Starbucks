@@ -17,11 +17,15 @@ const Icons = styled.div`
 export default function IconsContainer() {
   const [openMenu, setOpenMenu] = useState(false);
 
+  const handleClick = () => {
+    setOpenMenu(!openMenu);
+  }
+
   return (
     <Icons>
       <Cart />
-      <MenuButton openMenu={openMenu} setOpenMenu={setOpenMenu} />
-      <MenuOpen openMenu={openMenu} setOpenMenu={setOpenMenu}/>
+      <MenuButton openMenu={openMenu} handleClick={handleClick} />
+      <MenuOpen openMenu={openMenu} handleClick={handleClick}/>
     </Icons>
   );
 }
