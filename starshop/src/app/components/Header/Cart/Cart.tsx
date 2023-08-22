@@ -8,7 +8,6 @@ import { useState, useEffect, useRef } from "react";
 
 
 const CartContainer = styled.div`
-  padding: 0;
 `;
 
 const CartButton = styled.button`

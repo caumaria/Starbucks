@@ -32,6 +32,7 @@ const MenuContainer = styled.div<MenuContainerProps>`
   font-family: "LanderGrande";
   font-size: 2.1rem;
   line-height: 1.1;
+  z-index: 99;
 
   span {
     position: fixed;
@@ -67,6 +68,7 @@ const MenuContainer = styled.div<MenuContainerProps>`
       padding: 1rem 0;
       img {
         width: 40px;
+        height: auto;
         margin: 0;
         margin-right: 20px;
       }

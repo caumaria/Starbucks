@@ -35,9 +35,9 @@ export const ShopContainer = styled.div`
 
 export const CardWrapper = styled.div`
   overflow-x: auto;
-  padding: 2rem 50px;
+  padding: 1rem 50px;
   display: inline-block;
-  height: calc(100vh - 250px) !important;
+  height: calc(100vh - 280px) !important;
   margin: 0 !important;
   gap: 1rem;
 `;
@@ -50,6 +50,7 @@ export const CartTotal = styled.div`
   justify-content: center;
   gap: 1rem;
   padding-top: 1rem;
+  margin-bottom: 1rem;
 
   section {
     font-size: 16px;
