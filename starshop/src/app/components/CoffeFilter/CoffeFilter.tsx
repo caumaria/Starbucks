@@ -2,16 +2,19 @@ import * as React from "react";
 import Container from "../Container";
 import Title from "../Title";
 import Filter from "./Filter";
+import styled from "styled-components";
 
-export interface CoffeFilterProps {}
+const CoffeFilterContainer = styled.div`
+  margin-top: 4rem;
+`;
 
-export default function CoffeFilter(props: CoffeFilterProps) {
+export default function CoffeFilter() {
   return (
-    <>
-      <Container height={"200px"}>
+    <CoffeFilterContainer>
+      <Container height={"120px"}>
         <Title>Busque seu Café</Title>
       </Container>
       <Filter />
-    </>
+    </CoffeFilterContainer>
   );
 }

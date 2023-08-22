@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 const MainTitle = styled.h1`
-  font-size: 28px;
+  font-size: 32px;
   line-height: 34px;
   margin: 1rem auto 60px;
   color: var(--secondary-green);

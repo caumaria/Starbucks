@@ -7,7 +7,7 @@ export interface FilterProps {}
 const FilterList = styled.ul`
   display: flex;
   justify-content: center;
-  padding-bottom: 1rem;
+  padding-bottom: 2rem;
 
   li {
     list-style: none;
