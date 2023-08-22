@@ -25,7 +25,8 @@ I believe this is a nice little beginner project to start doing some new feature
 • Ecommerce Front-end Mec<br>
 • CartContext & CartProvider<br>
 • Responsiveness - Mobile | Tablet | Pc<br>
-
+• LocalStorage <br>
+<br>
 Missing: <br>
 • proper +/- buttons <br>
 • filter <br>
