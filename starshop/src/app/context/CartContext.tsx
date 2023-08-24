@@ -1,8 +1,9 @@
-import { createContext, useContext } from "react";
+import { createContext, useContext, useState } from "react";
 import { useLocalStorage } from "../hooks/useLocalStorage";
 
 type CartProviderProps = {
   children: React.ReactNode;
+  itemCounter: number;
 };
 
 type CartContextProps = {
@@ -10,8 +11,10 @@ type CartContextProps = {
   increaseQuantity: (id: number) => void;
   decreaseQuantity: (id: number) => void;
   removeItem: (id: number) => void;
-  cartQuantity: number
-  cartItems: CartItem[]
+  addToCart: (id: number, itemCounter: number) => void
+  cartQuantity: number;
+  cartItems: CartItem[];
+  itemCounter: number;
 };
 
 type CartItem = {
@@ -25,7 +28,7 @@ export function useCart() {
   return useContext(CartContext);
 }
 
-export function CartProvider({ children }: CartProviderProps) {
+export function CartProvider({ children, itemCounter }: CartProviderProps) {
   const [cartItems, setCartItems] = useLocalStorage<CartItem[]>(
     "shopping-cart",
     []
@@ -39,10 +42,29 @@ export function CartProvider({ children }: CartProviderProps) {
     return cartItems.find((item) => item.id === id)?.quantity || 0;
   }
 
-  {/*mudar função botao shop
-  + click adicionar zerar counter
+  function addToCart(id: number, itemCounter: number) {
+    
+    setCartItems(currItems => {
+      const updatedItems = currItems.map(item => {
+        if (item.id === id) {
+          return { ...item, quantity: item.quantity + itemCounter };
+        }
+        return item;
+      });
+      
+      const itemExists = currItems.some(item => item.id === id);
+  
+      if (!itemExists) {
+        return [...updatedItems, { id, quantity: itemCounter }];
+      }
+  
+      return updatedItems;
+    });
+  }
+  
 
-*/}
+
+  {/* Cart */}
   function increaseQuantity(id: number) {
     setCartItems(currItems => {
       if (currItems.find(item => item.id === id) == null) {
@@ -86,8 +108,10 @@ export function CartProvider({ children }: CartProviderProps) {
             increaseQuantity,
             decreaseQuantity,
             removeItem,
+            addToCart,
             cartItems,
             cartQuantity,
+            itemCounter
             
         }}>
         {children}
