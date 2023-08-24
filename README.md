@@ -17,20 +17,19 @@ Preview:::::::: <br>
 # 🧠 About<br>
 <br>
 Starbucks Ecommerce, you can find the official website here: https://www.starbucksathome.com/br/cafes/c<br>
-I believe this is a nice little beginner project to start doing some new features, I'm learning a lot and hope to improve my skills <3<br>
+<br>
+I believe this is a nice beginner project to start doing some new features, I'm learning a lot and hope to improve my skills <3<br>
 <br>
 
 # 🕹️ Features:<br>
 <br>
-• Ecommerce Front-end Mec<br>
-• CartContext & CartProvider<br>
-• Responsiveness - Mobile | Tablet | Pc<br>
+• Ecommerce Front-end Mech (CartContext & CartProvider) <br>
+• Responsiveness - Mobile | Tablet | Pc <br>
 • LocalStorage <br>
 <br>
-Missing: <br>
-• proper +/- buttons <br>
-• filter <br>
-• z-indexxxxx <br>
+To do: <br>
+++ filter <br>
+++ z-indexxxxx (navbar doing weird things) <br>
 
 <br>
 
