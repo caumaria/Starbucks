@@ -17,12 +17,33 @@ export default function ProductCard({
   price,
   imgUrl,
 }: StoreItemProps) {
-  const { getItemQuantity, increaseQuantity, decreaseQuantity, addToCart } =
-    useCart();
-
-  const quantity = getItemQuantity(id);
-
+  const { addToCart } = useCart();
   const [itemCounter, setItemCounter] = useState(1);
+
+  const initialText = "Adicionar";
+  const addedText = "Adicionado";
+  const addingText = "Adicionando...";
+
+  const [buttonText, setButtonText] = useState(initialText);
+  const [timerBetween, setTimerBetween] = useState(false) 
+  {/* timer between clicks, prevent rapid ugly interactions */}
+
+  function handleAddToCartButton(id: number, itemCounter: number) {
+    if (!timerBetween) {
+      setButtonText(addingText);
+      addToCart(id, itemCounter);
+
+      setTimeout(() => {
+        setButtonText(addedText);
+        setTimerBetween(true);
+
+        setTimeout(() => {
+          setButtonText(initialText);
+          setTimerBetween(false);
+        }, 1000);
+      }, 1000);
+    }
+  }
 
   const plus = () => {
     setItemCounter(itemCounter + 1);
@@ -51,7 +72,9 @@ export default function ProductCard({
             <button onClick={plus}>+</button>
           </CounterContainer>
           <span>{itemCounter}</span>
-          <Button onClick={() => addToCart(id, itemCounter)}>Adicionar</Button>
+          <Button onClick={() => handleAddToCartButton(id, itemCounter)}>
+            {buttonText}
+          </Button>
         </ButtonsContainer>
       </div>
     </Card>

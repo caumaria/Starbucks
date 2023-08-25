@@ -38,6 +38,14 @@ export const ButtonsContainer = styled.div`
     right: 19%;
     color: var(--secondary-green);
   }
+
+  button {
+    background-color: var(--secondary-green);
+
+    &:hover {
+      background-color: #006241CC;
+    }
+  }
 `;
 
 export const CounterContainer = styled.div`
