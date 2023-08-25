@@ -19,13 +19,15 @@ export default function IconsContainer() {
 
   const handleClick = () => {
     setOpenMenu(!openMenu);
-  }
+  };
 
   return (
-    <Icons>
-      <Cart />
-      <MenuButton openMenu={openMenu} handleClick={handleClick} />
-      <MenuOpen openMenu={openMenu} handleClick={handleClick}/>
-    </Icons>
+    <>
+      <Icons>
+        <Cart />
+        <MenuButton openMenu={openMenu} handleClick={handleClick} />
+      </Icons>
+      <MenuOpen openMenu={openMenu} handleClick={handleClick} />
+    </>
   );
 }

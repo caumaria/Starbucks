@@ -18,7 +18,6 @@ interface MenuContainerProps {
 }
 
 const MenuContainer = styled.div<MenuContainerProps>`
-  height: 100vh;
   background-color: #f2f0eb;
   display: flex;
   transition: transform 0.3s ease-in-out;
@@ -27,17 +26,17 @@ const MenuContainer = styled.div<MenuContainerProps>`
   position: absolute;
   top: 0;
   left: 0;
-  max-width: 100vw;
-  width: 100%;
+  min-width: 100vw;
   font-family: "LanderGrande";
   font-size: 2.1rem;
   line-height: 1.1;
   z-index: 99;
+  padding-bottom: 100px;
 
   span {
     position: fixed;
-    top: 4%;
-    right: 2%;
+    top: 5%;
+    right: 0%;
   }
   p {
     cursor: pointer;
@@ -52,15 +51,15 @@ const MenuContainer = styled.div<MenuContainerProps>`
     height: 100vh;
     width: 40%;
     border-right: 1px solid rgba(30, 57, 50, 0.1);
-    padding: 6rem 1.3rem;
+    margin: 3rem 1rem;
     li {
       list-style: none;
       padding: 0.5rem 0;
     }
   }
   aside {
+    margin: 3rem 1rem;
     height: 100vh;
-    padding: 6rem 2rem;
     div {
       display: flex;
       align-items: center;
