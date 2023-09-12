@@ -1,6 +1,7 @@
 # Starbucks
-
-Starbucks Ecommerce shop
+<br>
+Preview:::::::: <br>
+<br>
 
 ![image](https://github.com/caumaria/Starbucks/assets/88352423/d4120a17-5480-4c75-acec-bce79d205caf)
 
@@ -10,6 +11,39 @@ Starbucks Ecommerce shop
 
 ![image](https://github.com/caumaria/Starbucks/assets/88352423/9e057283-c2d4-4143-a797-e04bd08aa578)
 
-
-
 ...loading
+<br>
+
+# 🧠 About<br>
+<br>
+Starbucks Ecommerce, you can find the official website here: https://www.starbucksathome.com/br/cafes/c<br>
+<br>
+I believe this is a nice beginner project to start doing some new features, I'm learning a lot and hope to improve my skills <3<br>
+<br>
+
+# 🕹️ Features:<br>
+<br>
+• Ecommerce Front-end Mech (CartContext & CartProvider) <br>
+• Responsiveness - Mobile | Tablet | Pc <br>
+• LocalStorage <br>
+<br>
+To do: <br>
+++ filter <br>
+++ z-indexxxxx (navbar doing weird things) <br>
+
+<br>
+
+# 📋 Requirements<br>
+<br>
+• React Typescript<br>
+• next@latest<br>
+• styled-components<br>
+
+<br>
+
+# 🖥️ Installation<br>
+<br>
+• Clone this repo<br>
+• Go to the project folder - cd starshop<br>
+• Install dependencies<br>
+• npm run dev | npm start<br>
