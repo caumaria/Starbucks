@@ -25,7 +25,7 @@ export default function ProductCard({
   const addedText = "Adicionado";
 
   const [buttonText, setButtonText] = useState(initialText);
-  const [timerBetween, setTimerBetween] = useState(false) 
+  const [timerBetween, setTimerBetween] = useState(false)
   {/* timer between clicks, prevent rapid ugly interactions */}
 
   function handleAddToCartButton(id: number, itemCounter: number) {
@@ -33,15 +33,16 @@ export default function ProductCard({
       setButtonText(addingText);
       addToCart(id, itemCounter);
 
+      setTimerBetween(true);
+
       setTimeout(() => {
         setButtonText(addedText);
-        setTimerBetween(true);
 
         setTimeout(() => {
           setButtonText(initialText);
           setTimerBetween(false);
-        }, 1000);
-      }, 1000);
+        }, 700);
+      }, 900);
     }
   }
 
@@ -72,7 +73,11 @@ export default function ProductCard({
             <button onClick={plus}>+</button>
           </CounterContainer>
           <span>{itemCounter}</span>
-          <Button onClick={() => handleAddToCartButton(id, itemCounter)}>
+          <Button 
+          disabled={timerBetween} 
+          onClick={() => handleAddToCartButton(id, itemCounter)}
+          style={{ opacity: timerBetween ? '50%' : '100%' }}
+          >
             {buttonText}
           </Button>
         </ButtonsContainer>
