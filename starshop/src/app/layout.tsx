@@ -23,7 +23,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={myFont.className}>
         <StyledComponentsRegistry>
-          <CartProvider>
+          <CartProvider itemCounter={0}>
             <Navbar />
             {children}
           </CartProvider>

@@ -21,8 +21,8 @@ export default function ProductCard({
   const [itemCounter, setItemCounter] = useState(1);
 
   const initialText = "Adicionar";
-  const addedText = "Adicionado";
   const addingText = "Adicionando...";
+  const addedText = "Adicionado";
 
   const [buttonText, setButtonText] = useState(initialText);
   const [timerBetween, setTimerBetween] = useState(false) 

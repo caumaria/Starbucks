@@ -20,18 +20,19 @@ interface MenuContainerProps {
 const MenuContainer = styled.div<MenuContainerProps>`
   background-color: #f2f0eb;
   display: flex;
+  font-family: "LanderGrande";
+  font-size: 2.1rem;
   transition: transform 0.3s ease-in-out;
   transform: ${({ openMenu }) =>
     openMenu ? "translateX(0)" : "translateX(-100%)"};
   position: absolute;
   top: 0;
   left: 0;
-  min-width: 100vw;
-  font-family: "LanderGrande";
-  font-size: 2.1rem;
   line-height: 1.1;
-  z-index: 99;
+  min-width: 100%;
+  min-height: 100%;
   padding-bottom: 100px;
+  z-index: 99;
 
   span {
     position: fixed;
