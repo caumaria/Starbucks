@@ -5,7 +5,7 @@ import Filter from "./Filter";
 import styled from "styled-components";
 
 const CoffeFilterContainer = styled.div`
-  margin-top: 4rem;
+  margin-top: 8rem;
 `;
 
 export default function CoffeFilter() {

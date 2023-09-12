@@ -1,6 +1,5 @@
 import * as React from "react";
 import styled from "styled-components";
-import Logo from "../Header/Logo";
 import Image from "next/image";
 import BrasilIcon from "../../../../public/imgs/brazil_icon.gif";
 import WorldIcon from "../../../../public/imgs/World.png";
@@ -8,6 +7,7 @@ import InstagramIcon from "../../../../public/imgs/Instagram.png";
 import FacebookIcon from "../../../../public/imgs/Facebook.png";
 import YoutubeIcon from "../../../../public/imgs/Youtube.png";
 import WhatsappIcon from "../../../../public/imgs/whats.png";
+import LogoFooter from "../../../../public/imgs/logo-footer.png";
 
 const FooterContainer = styled.section`
   display: flex;
@@ -22,6 +22,12 @@ const FooterContainer = styled.section`
   color: white;
   gap: 1rem;
   padding: 1rem;
+  position: relative;
+
+  .first {
+    position: absolute;
+    top: -10%;
+  }
 
   img,
   a,
@@ -49,6 +55,7 @@ const MiddleSection = styled.div`
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  margin-top: 3rem;
   div {
     display: flex;
     gap: 1rem;
@@ -75,7 +82,8 @@ const MiddleSection = styled.div`
 export default function Footer() {
   return (
     <FooterContainer>
-      <Logo />
+      <Image src={LogoFooter} alt=''
+      className="first"/>
 
       <MiddleSection>
         <div>

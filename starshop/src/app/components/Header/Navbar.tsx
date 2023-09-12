@@ -13,8 +13,13 @@ const NavbarContainer = styled.header`
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 0.7rem;
+  height: 100px;
   width: 100vw;
+  position: fixed;
+  top: 0;
+  z-index: 9;
+  background-color: white;
+  padding: 0 1rem;
 `;
 
 const RightContainer = styled.div`
