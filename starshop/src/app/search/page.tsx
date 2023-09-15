@@ -1,12 +1,15 @@
+'use client'
 import * as React from 'react';
+import styled from 'styled-components';
 
-export interface IAppProps {
-}
+const SearchContainer = styled.section`
+  margin-top: 8rem;
+`;
 
-export default function Search (props: IAppProps) {
+export default function Search () {
   return (
-    <div>
+    <SearchContainer>
       Pesquisar
-    </div>
+    </SearchContainer>
   );
 }
