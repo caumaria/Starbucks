@@ -1,12 +1,15 @@
-import * as React from 'react';
+'use client'
+import * as React from "react";
+import styled from "styled-components";
 
-export interface IAppProps {
-}
+const CartContainer = styled.section`
+  margin-top: 8rem;
+`;
 
-export default function Cart (props: IAppProps) {
+export default function Cart () {
   return (
-    <div>
+    <CartContainer>
       cart
-    </div>
+    </CartContainer>
   );
 }

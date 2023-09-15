@@ -1,6 +1,5 @@
 import * as React from "react";
 import styled from "styled-components";
-import Container from "../Container";
 
 export interface FilterProps {}
 
@@ -8,6 +7,7 @@ const FilterList = styled.ul`
   display: flex;
   justify-content: center;
   padding-bottom: 2rem;
+  gap: 1rem;
 
   li {
     list-style: none;
