@@ -4,7 +4,15 @@ import items from "../../data/items.json";
 import ProductCard from "./ProductCard";
 import styled from "styled-components";
 
-export interface ShopProps {}
+const ShopContainer = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: "100%";
+  padding: 0 1rem;
+  background: #f2f0eb;
+`;
 
 const CardContainer = styled.section`
   display: grid;
@@ -18,9 +26,9 @@ const CardContainer = styled.section`
   gap: 1rem;
 `;
 
-export default function Shop(props: ShopProps) {
+export default function Shop() {
   return (
-    <Container background={"#f2f0eb"}>
+    <ShopContainer>
       <CardContainer>
         
           {items.map((item) => (
@@ -30,6 +38,6 @@ export default function Shop(props: ShopProps) {
           ))}
         
       </CardContainer>
-    </Container>
+    </ShopContainer>
   );
 }

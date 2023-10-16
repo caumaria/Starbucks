@@ -3,9 +3,9 @@ import Button from "../../Button";
 import styled from "styled-components";
 import MenuButton from "./MenuButton";
 import Text from "../../lettering";
-import SectionMenu1 from "./sectionMenu1.png";
-import SectionMenu2 from "./sectionMenu2.png";
-import SectionMenu3 from "./sectionMenu3.png";
+import SectionMenu1 from "/public/sectionMenu1.png";
+import SectionMenu2 from "/public/sectionMenu2.png";
+import SectionMenu3 from "/public/sectionMenu3.png";
 import Image from "next/image";
 
 interface MenuOpenProps {
@@ -36,8 +36,8 @@ const MenuContainer = styled.div<MenuContainerProps>`
 
   span {
     position: fixed;
-    top: 5%;
-    right: 0%;
+    top: 4%;
+    right: 2%;
   }
   p {
     cursor: pointer;
@@ -76,6 +76,7 @@ const MenuContainer = styled.div<MenuContainerProps>`
   }
 `;
 
+
 export default function MenuOpen({ openMenu, handleClick }: MenuOpenProps) {
   return (
     <MenuContainer openMenu={openMenu}>
@@ -98,15 +99,15 @@ export default function MenuOpen({ openMenu, handleClick }: MenuOpenProps) {
 
       <aside>
         <div>
-          <Image src={SectionMenu1} alt="capsulas de café Nespresso"></Image>
+          <Image src={SectionMenu1} alt="capsulas de café Nespresso" />
           <Text>Starbucks® by Nespresso®</Text>
         </div>
         <div>
-          <Image src={SectionMenu2} alt="capsulas de café Dolce Gusto"></Image>
+          <Image src={SectionMenu2} alt="capsulas de café Dolce Gusto" />
           <Text>Starbucks® by NESCAFÉ® Dolce Gusto®</Text>
         </div>
         <div>
-          <Image src={SectionMenu3} alt="café moído"></Image>
+          <Image src={SectionMenu3} alt="café moído" />
           <Text>Café Torrado Moído</Text>
         </div>
       </aside>

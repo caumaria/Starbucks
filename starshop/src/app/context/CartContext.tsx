@@ -111,8 +111,7 @@ export function CartProvider({ children, itemCounter }: CartProviderProps) {
             addToCart,
             cartItems,
             cartQuantity,
-            itemCounter
-            
+            itemCounter            
         }}>
         {children}
     </CartContext.Provider>

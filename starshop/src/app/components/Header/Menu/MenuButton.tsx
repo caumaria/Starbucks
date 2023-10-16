@@ -15,7 +15,7 @@ const MenuContainer = styled.div`
   }
 `;
 
-const StyledBurger = styled.button<{ openMenu: boolean }>`
+const StyledBurger = styled.button<{openMenu: boolean}>`
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -39,20 +39,18 @@ const StyledBurger = styled.button<{ openMenu: boolean }>`
   }
 
   :first-child {
-    transform: ${({ openMenu }) => (openMenu ? "rotate(45deg)" : "rotate(0)")};
+    transform: ${(props) => (props.openMenu ? "rotate(45deg)" : "rotate(0)")};
   }
 
   :nth-child(2) {
-    opacity: ${({ openMenu }) => (openMenu ? "0" : "1")};
-    transform: ${({ openMenu }) => (openMenu ? "translateX(20px)" : "translateX(0)")};
+    opacity: ${(props) => (props.openMenu ? "0" : "1")};
+    transform: ${(props) => (props.openMenu ? "translateX(20px)" : "translateX(0)")};
   }
 
   :nth-child(3) {
-    transform: ${({ openMenu }) => (openMenu ? "rotate(-45deg)" : "rotate(0)")};
+    transform: ${(props) => (props.openMenu ? "rotate(-45deg)" : "rotate(0)")};
   }
 `;
-
-
 
 export default function MenuButton({ openMenu, handleClick }: MenuButtonProps) {
 
