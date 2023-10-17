@@ -1,3 +1,4 @@
+"use client"
 import * as React from "react";
 import styled from "styled-components";
 
@@ -15,7 +16,7 @@ const MenuContainer = styled.div`
   }
 `;
 
-const StyledBurger = styled.button<{openMenu: boolean}>`
+const StyledBurger = styled.button<{$openMenu: boolean}>`
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -39,16 +40,16 @@ const StyledBurger = styled.button<{openMenu: boolean}>`
   }
 
   :first-child {
-    transform: ${(props) => (props.openMenu ? "rotate(45deg)" : "rotate(0)")};
+    transform: ${(props) => (props.$openMenu ? "rotate(45deg)" : "rotate(0)")};
   }
 
   :nth-child(2) {
-    opacity: ${(props) => (props.openMenu ? "0" : "1")};
-    transform: ${(props) => (props.openMenu ? "translateX(20px)" : "translateX(0)")};
+    opacity: ${(props) => (props.$openMenu ? "0" : "1")};
+    transform: ${(props) => (props.$openMenu ? "translateX(20px)" : "translateX(0)")};
   }
 
   :nth-child(3) {
-    transform: ${(props) => (props.openMenu ? "rotate(-45deg)" : "rotate(0)")};
+    transform: ${(props) => (props.$openMenu ? "rotate(-45deg)" : "rotate(0)")};
   }
 `;
 
@@ -56,7 +57,7 @@ export default function MenuButton({ openMenu, handleClick }: MenuButtonProps) {
 
   return (
     <MenuContainer>
-      <StyledBurger openMenu={openMenu} onClick={handleClick}>
+      <StyledBurger $openMenu={openMenu} onClick={handleClick}>
         <div />
         <div />
         <div />

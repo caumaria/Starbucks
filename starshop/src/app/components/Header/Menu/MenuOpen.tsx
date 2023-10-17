@@ -1,3 +1,4 @@
+"use client"
 import * as React from "react";
 import Button from "../../Button";
 import styled from "styled-components";
@@ -14,7 +15,7 @@ interface MenuOpenProps {
 }
 
 interface MenuContainerProps {
-  openMenu: boolean;
+  $openMenu: boolean;
 }
 
 const MenuContainer = styled.div<MenuContainerProps>`
@@ -23,8 +24,8 @@ const MenuContainer = styled.div<MenuContainerProps>`
   font-family: "LanderGrande";
   font-size: 2.1rem;
   transition: transform 0.3s ease-in-out;
-  transform: ${({ openMenu }) =>
-    openMenu ? "translateX(0)" : "translateX(-100%)"};
+  transform: ${({ $openMenu }) =>
+    $openMenu ? "translateX(0)" : "translateX(-100%)"};
   position: absolute;
   top: 0;
   left: 0;
@@ -76,10 +77,9 @@ const MenuContainer = styled.div<MenuContainerProps>`
   }
 `;
 
-
 export default function MenuOpen({ openMenu, handleClick }: MenuOpenProps) {
   return (
-    <MenuContainer openMenu={openMenu}>
+    <MenuContainer $openMenu={openMenu}>
       <span>
         <MenuButton openMenu={openMenu} handleClick={handleClick} />
       </span>

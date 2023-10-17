@@ -9,6 +9,7 @@ import IconsContainer from "./Menu/IconsContainer";
 import styled from "styled-components";
 import { CenterDiv, FixedDiv } from "../Center";
 
+
 const NavbarContainer = styled.header`
   display: flex;
   align-items: center;
