@@ -61,7 +61,7 @@ export default function ProductCard({
   return (
     <Card>
       <div>
-        <Image src={imgUrl} alt=""></Image>
+        <Image src={imgUrl} alt={name} width={150} height={186}></Image>
       </div>
       <div>
         <p>{name}</p>

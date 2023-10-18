@@ -17,6 +17,7 @@ export const Card = styled.div`
   img {
     margin: 0 30px;
     height: auto;
+    width: auto;
     border: 0;
   }
 `;

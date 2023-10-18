@@ -20,6 +20,18 @@ export const ShoppingContainer = styled.div`
 export const ShopContainer = styled.div`
   height: 100vh;
 
+  section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    button {
+      background: none;
+      border: none;
+      font-size: 1rem;
+    }
+  }
+
   h1 {
     font-size: 26px;
     font-weight: 400;

@@ -29,6 +29,10 @@ const FilterList = styled.ul`
     color: var(--secondary-green);
     border-bottom: solid 2px #006241;
   }
+
+  @media (max-width: 570px) {
+    display: none;
+  }
 `;
 
 

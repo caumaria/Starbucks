@@ -54,9 +54,13 @@ const MenuContainer = styled.div<MenuContainerProps>`
     width: 40%;
     border-right: 1px solid rgba(30, 57, 50, 0.1);
     margin: 3rem 1rem;
+    padding-right: 1rem;
     li {
       list-style: none;
       padding: 0.5rem 0;
+    }
+    @media (max-width: 500px) {
+      border: none;
     }
   }
   aside {
@@ -74,7 +78,12 @@ const MenuContainer = styled.div<MenuContainerProps>`
         margin-right: 20px;
       }
     }
+    @media (max-width: 500px) {
+      display: none;
+    }
   }
+
+  
 `;
 
 export default function MenuOpen({ openMenu, handleClick }: MenuOpenProps) {

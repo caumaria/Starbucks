@@ -46,7 +46,7 @@ export function CartItem({ id, quantity }: CartItemProps) {
   return (
     <CartItemContainer>
       <div>
-        <Image src={item.imgUrl} alt="" />
+        <Image src={item.imgUrl} alt={item.name} width={76} height={94}/>
       </div>
 
       <div>
