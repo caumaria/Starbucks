@@ -3,6 +3,7 @@ import Button from "../Button";
 import { ButtonsContainer, Card, CounterContainer } from "./CardStyle";
 import { useCart } from "app/context/CartContext";
 import { useState } from "react";
+import Image from "next/image";
 
 type StoreItemProps = {
   id: number;
@@ -60,7 +61,7 @@ export default function ProductCard({
   return (
     <Card>
       <div>
-        <img src={imgUrl} alt=""></img>
+        <Image src={imgUrl} alt=""></Image>
       </div>
       <div>
         <p>{name}</p>

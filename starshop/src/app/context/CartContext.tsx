@@ -1,3 +1,4 @@
+'use client'
 import { createContext, useContext } from "react";
 import { useLocalStorage } from "../hooks/useLocalStorage";
 
@@ -33,10 +34,10 @@ export function CartProvider({ children, itemCounter }: CartProviderProps) {
     "shopping-cart",
     []
   )
-  const cartQuantity = cartItems.reduce(
-    (quantity, item) => item.quantity + quantity,
-    0
-  )
+
+  const cartQuantity = Array.isArray(cartItems)
+  ? cartItems.reduce((quantity, item) => item.quantity + quantity, 0)
+  : 0;
 
   function getItemQuantity(id: number) {
     return cartItems.find((item) => item.id === id)?.quantity || 0;
@@ -62,7 +63,6 @@ export function CartProvider({ children, itemCounter }: CartProviderProps) {
     });
   }
   
-
 
   {/* Cart */}
   function increaseQuantity(id: number) {

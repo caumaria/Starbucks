@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { CounterContainer } from "../../Shop/CardStyle";
 import { CenterDiv } from "../../Center";
 import { useCart } from "app/context/CartContext";
+import Image from "next/image";
 
 type CartItemProps = {
   id: number;
@@ -45,7 +46,7 @@ export function CartItem({ id, quantity }: CartItemProps) {
   return (
     <CartItemContainer>
       <div>
-        <img src={item.imgUrl} />
+        <Image src={item.imgUrl} alt="" />
       </div>
 
       <div>
