@@ -1,10 +1,10 @@
-import { useCart } from "@/app/context/CartContext";
 import * as React from "react";
 import Image from "next/image";
 import CartIcon from "../../../../../public/minicart.svg";
 import styled from "styled-components";
 import { ShoppingCart } from "./ShoppingCart";
 import { useState, useEffect, useRef } from "react";
+import { useCart } from "app/context/CartContext";
 
 
 const CartContainer = styled.div`

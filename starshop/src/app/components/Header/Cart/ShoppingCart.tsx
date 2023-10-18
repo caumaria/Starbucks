@@ -1,10 +1,10 @@
 "use client";
 
-import { useCart } from "@/app/context/CartContext";
 import { CartItem } from "./CartItem";
 import { CardWrapper, ShopContainer, ShoppingContainer } from "./ShoppingCartStyle";
 import EmptyCart from "./EmptyCart";
 import ShoppingCartTotal from "./ShoppingCartTotal";
+import { useCart } from "app/context/CartContext";
 
 export function ShoppingCart({
   open,

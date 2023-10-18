@@ -1,8 +1,8 @@
-import { useCart } from "@/app/context/CartContext";
 import items from "../../../data/items.json";
 import styled from "styled-components";
 import { CounterContainer } from "../../Shop/CardStyle";
 import { CenterDiv } from "../../Center";
+import { useCart } from "app/context/CartContext";
 
 type CartItemProps = {
   id: number;

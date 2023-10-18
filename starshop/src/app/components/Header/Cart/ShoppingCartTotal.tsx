@@ -1,9 +1,9 @@
-import { useCart } from "@/app/context/CartContext";
 import items from "../../../data/items.json";
 import * as React from "react";
 import Button from "../../Button";
 import { CartTotal } from "./ShoppingCartStyle";
 import Link from "next/link";
+import { useCart } from "app/context/CartContext";
 
 export default function ShoppingCartTotal() {
   const { cartItems } = useCart();

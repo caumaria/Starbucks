@@ -1,7 +1,7 @@
 import * as React from "react";
 import Button from "../Button";
 import { ButtonsContainer, Card, CounterContainer } from "./CardStyle";
-import { useCart } from "@/app/context/CartContext";
+import { useCart } from "app/context/CartContext";
 import { useState } from "react";
 
 type StoreItemProps = {
