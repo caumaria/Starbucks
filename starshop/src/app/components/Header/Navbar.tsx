@@ -20,7 +20,7 @@ const NavbarContainer = styled.header`
   top: 0;
   z-index: 9;
   background-color: white;
-  padding: 0 1rem;
+  padding: 0 .5rem;
 `;
 
 const RightContainer = styled.div`

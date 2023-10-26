@@ -36,7 +36,7 @@ export const ButtonsContainer = styled.div`
     width: 10px;
     position: relative;
     font-size: 14px;
-    right: 19%;
+    right: 16%;
     color: var(--secondary-green);
   }
 

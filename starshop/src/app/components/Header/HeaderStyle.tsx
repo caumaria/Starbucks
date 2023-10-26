@@ -7,6 +7,7 @@ interface HeaderContainerProps {
 
 const StyledHeaderContainer = styled.div<HeaderContainerProps>`
   max-width: 1440px;
+  min-width: 320px;
   width: 100%;  
   display: flex;
   align-items: center;

@@ -23,6 +23,7 @@ const CartItemContainer = styled.div`
 
   p {
     margin: .4rem 0;
+    font-size: .7rem;
   }
 `;
 
@@ -52,7 +53,7 @@ export function CartItem({ id, quantity }: CartItemProps) {
       <div>
         <b>{item.name}</b>
 
-        <p>Visualizar Detalhes v</p>
+        <p>Visualizar detalhes v</p>
 
         <div>R${item.price}</div>
         <CenterDiv>

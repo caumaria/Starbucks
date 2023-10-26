@@ -8,6 +8,7 @@ export const ShoppingContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   max-width: 460px;
+  min-width: 320px;
   width: 100%;
   height: 100vh;
   right: 0;
@@ -28,7 +29,8 @@ export const ShopContainer = styled.div`
     button {
       background: none;
       border: none;
-      font-size: 1rem;
+      font-size: 1.5rem;
+      cursor: pointer;
     }
   }
 
