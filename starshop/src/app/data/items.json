@@ -3,93 +3,116 @@
     "id": 1,
     "name": "Combo Starbucks Caffè Verona™ by Nespresso - 100 cápsulas",
     "price": 215,
-    "imgUrl": "/imgs/verona.png"
+    "imgUrl": "/imgs/verona.png",
+    "by": "by Nespresso®"
   },
   {
     "id": 2,
     "name": "Combo Starbucks Espresso Roast by Nespresso - 100 cápsulas",
     "price": 200,
-    "imgUrl": "/imgs/roast.png"
+    "imgUrl": "/imgs/roast.png",
+    "by": "by Nespresso®"
   },
   {
     "id": 3,
     "name": "Combo Starbucks House Blend by Nespresso - 100 cápsulas",
     "price": 110,
-    "imgUrl": "/imgs/blend.png"
+    "imgUrl": "/imgs/blend.png",
+    "by": "by Nespresso®"
   },
   {
     "id": 4,
     "name": "Combo Starbucks Caffè Verona™ by Nespresso - 100 cápsulas",
     "price": 215,
-    "imgUrl": "/imgs/verona.png"
+    "imgUrl": "/imgs/verona.png",
+    "by": "by Nespresso®"
   },
   {
     "id": 5,
     "name": "Combo Starbucks Espresso Roast by Nespresso - 100 cápsulas",
     "price": 299,
-    "imgUrl": "/imgs/roast.png"
+    "imgUrl": "/imgs/roast.png",
+    "by": "by Nespresso®"
   },
   {
     "id": 6,
     "name": "Combo Starbucks House Blend by Nespresso - 100 cápsulas",
     "price": 116,
-    "imgUrl": "/imgs/blend.png"
+    "imgUrl": "/imgs/blend.png",
+    "by": "by Nespresso®"
   },{
     "id": 7,
     "name": "Combo Starbucks Caffè Verona™ by Nespresso - 100 cápsulas",
     "price": 155,
-    "imgUrl": "/imgs/verona.png"
+    "imgUrl": "/imgs/verona.png",
+    "by": "by Nespresso®"
   },
   {
     "id": 8,
     "name": "Combo Starbucks Espresso Roast by Nespresso - 100 cápsulas",
     "price": 265,
-    "imgUrl": "/imgs/roast.png"
+    "imgUrl": "/imgs/roast.png",
+    "by": "by Nespresso®"
   },
   {
     "id": 9,
     "name": "Combo Starbucks House Blend by Nespresso - 100 cápsulas",
     "price": 219,
-    "imgUrl": "/imgs/blend.png"
+    "imgUrl": "/imgs/blend.png",
+    "by": "by Nespresso®"
   },
   {
     "id": 10,
     "name": "Combo Starbucks House Blend by Nespresso - 100 cápsulas",
     "price": 116,
-    "imgUrl": "/imgs/blend.png"
+    "imgUrl": "/imgs/blend.png",
+    "by": "nespresso"
   },{
     "id": 11,
     "name": "Combo Starbucks Caffè Verona™ by Nespresso - 100 cápsulas",
     "price": 155,
-    "imgUrl": "/imgs/verona.png"
+    "imgUrl": "/imgs/verona.png",
+    "by": "nespresso"
   },
   {
     "id": 12,
     "name": "Combo Starbucks Espresso Roast by Nespresso - 100 cápsulas",
     "price": 265,
-    "imgUrl": "/imgs/roast.png"
+    "imgUrl": "/imgs/roast.png",
+    "by": "nespresso"
   },
   {
     "id": 13,
-    "name": "Combo Starbucks House Blend by Nespresso - 100 cápsulas",
-    "price": 219,
-    "imgUrl": "/imgs/blend.png"
+    "name": "Starbucks® Pike Place® Roast Torrado e Moído - 250g",
+    "price": 29,
+    "imgUrl": "/imgs/roastclara.png",
+    "type": "media",
+    "torrado": "moido"
   },
   {
     "id": 14,
-    "name": "Combo Starbucks House Blend by Nespresso - 100 cápsulas",
-    "price": 116,
-    "imgUrl": "/imgs/blend.png"
-  },{
+    "name": "Starbucks® Single-Origin Guatemala by Nespresso® - 10 cápsulas",
+    "price": 265,
+    "imgUrl": "/imgs/guatemalaclara.png",
+    "by": "nespresso",
+    "type": "clara",
+    "torrado": "moido"
+  },
+  {
     "id": 15,
-    "name": "Combo Starbucks Caffè Verona™ by Nespresso - 100 cápsulas",
-    "price": 155,
-    "imgUrl": "/imgs/verona.png"
+    "name": "Starbucks® Blonde Espresso Roast by Nespresso® - 10 cápsulas",
+    "price": 26,
+    "imgUrl": "/imgs/blondclara.png",
+    "by": "nespresso",
+    "type": "clara",
+    "torrado": "moido"
   },
   {
     "id": 16,
-    "name": "Combo Starbucks Espresso Roast by Nespresso - 100 cápsulas",
-    "price": 265,
-    "imgUrl": "/imgs/roast.png"
+    "name": "Starbucks® Blonde Espresso Roast by NESCAFÉ® Dolce Gusto® - 12 Cápsulas",
+    "price": 26,
+    "imgUrl": "/imgs/blondeclara.png",
+    "by": "by NESCAFÉ® Dolce Gusto®",
+    "type": "Torra Clara"  
   }
 ]

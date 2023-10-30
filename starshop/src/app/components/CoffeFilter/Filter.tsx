@@ -1,5 +1,7 @@
 import * as React from "react";
+import { useState } from "react";
 import styled from "styled-components";
+import OpenFilter from "./OpenFilter";
 
 export interface FilterProps {}
 
@@ -35,14 +37,19 @@ const FilterList = styled.ul`
   }
 `;
 
-
 export default function Filter(props: FilterProps) {
+  const [openFilter, setOpenFilter] = useState(false);
+
+
   return (
-    <FilterList>
-      <li>Filtrar por:</li>
-      <li>Tipo de Café</li>
-      <li>Tipo de Torra</li>
-      <li>Origem</li>
-    </FilterList>
+    <>
+      <FilterList>
+        <li onClick={() => setOpenFilter(!openFilter)}>Filtrar por:</li>
+        <li>Tipo de Café</li>
+        <li>Tipo de Torra</li>
+        <li>Origem</li>
+      </FilterList>
+      {openFilter ? <OpenFilter/> : null}
+    </>
   );
 }
