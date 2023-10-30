@@ -1,9 +1,10 @@
-
+'use client';
 import "./globals.css";
 import localFont from "next/font/local";
 import Navbar from "./components/Header/Navbar";
 import StyledComponentsRegistry from "../../lib/registry";
 import { CartProvider } from "./context/CartContext";
+import Footer from "./components/Footer/Footer";
 
 const myFont = localFont({ src: "../../public/sodosans.woff2" });
 
@@ -19,6 +20,7 @@ export default function RootLayout({
           <CartProvider itemCounter={0}>
             <Navbar />
             {children}
+            <Footer />
           </CartProvider>
         </StyledComponentsRegistry>
       </body>
