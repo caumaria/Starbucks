@@ -35,7 +35,6 @@ const FooterContainer = styled.section`
   p {
     cursor: pointer;
   }
-
   p,
   span {
     opacity: 0.52;
@@ -56,11 +55,13 @@ const MiddleSection = styled.div`
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  margin-top: 3rem;
+  padding-top: 7rem;
+  font-size: 0.9rem;
   div {
     display: flex;
     gap: 1rem;
   }
+  
   section {
     display: flex;
     align-items: center;

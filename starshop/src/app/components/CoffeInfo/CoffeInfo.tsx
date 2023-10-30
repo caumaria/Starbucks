@@ -9,14 +9,19 @@ const CoffeInfoContainer = styled.footer`
   display: flex;
   cursor: pointer;
 
+  @media (max-width: 600px) {
+    flex-direction: column;
+  }
+
   section {
     flex: 1;
-    height: 20rem;
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
     overflow: hidden;
+    height: 100%;
+    max-height: 26rem;
   }
 `;
 
@@ -28,26 +33,26 @@ const CoffeItem = styled.section`
     left: 50%;
     transform: translate(-50%, -50%);
     color: white;
-    z-index: 99;
+    z-index: 2;
     p {
       text-transform: uppercase;
       font-family: "Pike";
       font-weight: 700;
-      font-size: 0.6rem;
+      font-size: 0.8rem;
       text-align: center;
       letter-spacing: 0.25em;
       margin-bottom: 1.2rem;
     }
     h4 {
       font-weight: 400;
-      font-size: 1.5rem;
+      font-size: 2rem;
       font-family: "LanderGrande";
       line-height: 42px;
       text-align: center;
     }
   }
   img {
-    transition: all 0.9s ease-in;
+    transition: all 0.8s ease-in-out;
   }
   &:hover img {
     transform: scale(1.2);
