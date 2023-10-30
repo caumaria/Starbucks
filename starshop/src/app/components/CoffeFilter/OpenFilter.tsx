@@ -12,8 +12,6 @@ const OpenFilterContaier = styled.div`
 export default function OpenFilter () {
   return (
     <OpenFilterContaier>
-        <a>coffe filter 1</a>
-        <a>coffe filter 2</a>
 
         <Link href="/nespresso">
         <span>

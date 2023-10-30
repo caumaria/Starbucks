@@ -1,4 +1,4 @@
-'use client';
+"use client";
 import "./globals.css";
 import localFont from "next/font/local";
 import Navbar from "./components/Header/Navbar";
@@ -20,7 +20,6 @@ export default function RootLayout({
           <CartProvider itemCounter={0}>
             <Navbar />
             {children}
-            <Footer />
           </CartProvider>
         </StyledComponentsRegistry>
       </body>
