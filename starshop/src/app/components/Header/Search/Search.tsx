@@ -7,6 +7,10 @@ import styled from "styled-components";
 const SearchContainer = styled.div`
   padding: 0;
 
+  a {
+    margin: 0;
+  }
+
   @media (max-width: 1000px) {
     width: 100px;
     span {
