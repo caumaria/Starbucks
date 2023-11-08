@@ -9,6 +9,7 @@ import IconsContainer from "./Menu/IconsContainer";
 import styled from "styled-components";
 import { CenterDiv, FixedDiv } from "../Center";
 
+//useEffect scroll down/up
 
 const NavbarContainer = styled.header`
   display: flex;
@@ -16,11 +17,10 @@ const NavbarContainer = styled.header`
   justify-content: center;
   height: 100px;
   width: 100vw;
-  position: fixed;
   top: 0;
   z-index: 9;
-  background-color: white;
-  padding: 0 .5rem;
+  padding: 0 0.5rem;
+  background-color: inherit;
 `;
 
 const RightContainer = styled.div`

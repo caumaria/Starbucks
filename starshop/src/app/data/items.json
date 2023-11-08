@@ -1,5 +1,12 @@
 [
   {
+    "id": 21,
+    "name": "Kit Boas Vindas Starbucks® by NESCAFÉ® Dolce Gusto® - 84 cápsulas",
+    "price": 151,
+    "imgUrl": "/imgs/kit.png",
+    "by": "by NESCAFÉ® Dolce Gusto®" 
+  },
+  {
     "id": 1,
     "name": "Combo Starbucks Caffè Verona™ by Nespresso - 100 cápsulas",
     "price": 215,
@@ -7,11 +14,25 @@
     "by": "by Nespresso®"
   },
   {
+    "id": 22,
+    "name": "Starbucks® Toffee Nut Latte by NESCAFÉ® Dolce Gusto® - 12 Cápsulas",
+    "price": 29,
+    "imgUrl": "/imgs/limit.png",
+    "by": "by NESCAFÉ® Dolce Gusto®" 
+  },
+  {
     "id": 2,
     "name": "Combo Starbucks Espresso Roast by Nespresso - 100 cápsulas",
     "price": 200,
     "imgUrl": "/imgs/roast.png",
     "by": "by Nespresso®"
+  },
+  {
+    "id": 19,
+    "name": "Starbucks® Caffè Verona™ Torrado e Moído - 250g",
+    "price": 23,
+    "imgUrl": "/imgs/veronamoido.png",
+    "by": "Café Torrado Moído"
   },
   {
     "id": 3,
@@ -40,7 +61,8 @@
     "price": 116,
     "imgUrl": "/imgs/blend.png",
     "by": "by Nespresso®"
-  },{
+  },
+  {
     "id": 7,
     "name": "Combo Starbucks Caffè Verona™ by Nespresso - 100 cápsulas",
     "price": 155,
@@ -66,53 +88,75 @@
     "name": "Combo Starbucks House Blend by Nespresso - 100 cápsulas",
     "price": 116,
     "imgUrl": "/imgs/blend.png",
-    "by": "nespresso"
+    "by": "by Nespresso®"
   },{
     "id": 11,
     "name": "Combo Starbucks Caffè Verona™ by Nespresso - 100 cápsulas",
     "price": 155,
     "imgUrl": "/imgs/verona.png",
-    "by": "nespresso"
+    "by": "by Nespresso®"
   },
   {
     "id": 12,
     "name": "Combo Starbucks Espresso Roast by Nespresso - 100 cápsulas",
     "price": 265,
     "imgUrl": "/imgs/roast.png",
-    "by": "nespresso"
+    "by": "by Nespresso®"
   },
   {
     "id": 13,
     "name": "Starbucks® Pike Place® Roast Torrado e Moído - 250g",
     "price": 29,
     "imgUrl": "/imgs/roastclara.png",
-    "type": "media",
-    "torrado": "moido"
+    "by": "Café Torrado Moído"
   },
   {
     "id": 14,
     "name": "Starbucks® Single-Origin Guatemala by Nespresso® - 10 cápsulas",
     "price": 265,
     "imgUrl": "/imgs/guatemalaclara.png",
-    "by": "nespresso",
-    "type": "clara",
-    "torrado": "moido"
+    "by": "by Nespresso®"
   },
   {
     "id": 15,
     "name": "Starbucks® Blonde Espresso Roast by Nespresso® - 10 cápsulas",
     "price": 26,
     "imgUrl": "/imgs/blondclara.png",
-    "by": "nespresso",
-    "type": "clara",
-    "torrado": "moido"
+    "by": "by Nespresso®"
   },
   {
     "id": 16,
     "name": "Starbucks® Blonde Espresso Roast by NESCAFÉ® Dolce Gusto® - 12 Cápsulas",
     "price": 26,
     "imgUrl": "/imgs/blondeclara.png",
-    "by": "by NESCAFÉ® Dolce Gusto®",
-    "type": "Torra Clara"  
+    "by": "by NESCAFÉ® Dolce Gusto®" 
+  },
+  {
+    "id": 17,
+    "name": "Combo Starbucks®  Torrado e Moído Colombia - 2 Pacotes de 250g",
+    "price": 53,
+    "imgUrl": "/imgs/combos.png",
+    "by": "Café Torrado Moído" 
+  },
+  {
+    "id": 18,
+    "name": "Starbucks® Single-Origin Colombia Torrado e Moído - 250g",
+    "price": 26,
+    "imgUrl": "/imgs/single.png",
+    "by": "Café Torrado Moído"
+  },
+  {
+    "id": 20,
+    "name": "Starbucks® House Blend Torrado e Moído- 250g",
+    "price": 23,
+    "imgUrl": "/imgs/blendmoido.png",
+    "by": "Café Torrado Moído"
+  },
+  {
+    "id": 23,
+    "name": "Starbucks® Americano House Blend by NESCAFÉ® Dolce Gusto® - 12 Cápsulas",
+    "price": 21,
+    "imgUrl": "/imgs/americano.png",
+    "by": "by NESCAFÉ® Dolce Gusto®" 
   }
 ]

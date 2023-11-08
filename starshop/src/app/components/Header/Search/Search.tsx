@@ -22,7 +22,7 @@ const SearchContainer = styled.div`
 export default function Search() {
   return (
     <SearchContainer>
-      <Link href="/search">
+      <Link href="">
         <span>
         Pesquisar
         </span>

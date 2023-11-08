@@ -20,13 +20,16 @@ export const Card = styled.div`
     width: auto;
     border: 0;
   }
+  p:nth-child(1) {
+    height: 70px;
+  }
 `;
 
 export const ButtonsContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 0.3rem;
+  gap: 1rem;
   margin: 1rem 0;
 
   span {
@@ -34,9 +37,7 @@ export const ButtonsContainer = styled.div`
     align-items: center;
     justify-content: center;
     width: 10px;
-    position: relative;
     font-size: 14px;
-    right: 16%;
     color: var(--secondary-green);
   }
 
@@ -50,7 +51,7 @@ export const ButtonsContainer = styled.div`
 `;
 
 export const CounterContainer = styled.div`
-  gap: 1.7rem;
+  gap: .8rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -63,7 +64,6 @@ export const CounterContainer = styled.div`
     height: 26px;
     border-radius: 20px;
     border: 1px solid var(--secondary-green);
-
     font-size: 14px;
     font-weight: bold;
     background: transparent;
@@ -72,15 +72,5 @@ export const CounterContainer = styled.div`
   :hover {
     background-color: var(--secondary-green);
     color: white;
-  }
-  span {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 10px;
-    position: relative;
-    font-size: 14px;
-    right: 63%;
-    color: var(--secondary-green);
   }
 `;

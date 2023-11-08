@@ -21,6 +21,7 @@ export default function RootLayout({
             <Navbar />
             {children}
           </CartProvider>
+          <Footer />
         </StyledComponentsRegistry>
       </body>
     </html>

@@ -1,3 +1,4 @@
+"use client";
 import * as React from "react";
 import Button from "../Button";
 import { ButtonsContainer, Card, CounterContainer } from "./CardStyle";
@@ -26,8 +27,10 @@ export default function ProductCard({
   const addedText = "Adicionado";
 
   const [buttonText, setButtonText] = useState(initialText);
-  const [timerBetween, setTimerBetween] = useState(false)
-  {/* timer between clicks, prevent rapid ugly interactions */}
+  const [timerBetween, setTimerBetween] = useState(false);
+  {
+    /* timer between clicks, prevent rapid ugly interactions */
+  }
 
   function handleAddToCartButton(id: number, itemCounter: number) {
     if (!timerBetween) {
@@ -66,18 +69,18 @@ export default function ProductCard({
       <div>
         <p>{name}</p>
         <p>★★★★★ (0)</p>
-        <p>RS{price}</p>
+        <p>R${price}</p>
 
         <ButtonsContainer>
           <CounterContainer>
             <button onClick={minus}>-</button>
+            <span>{itemCounter}</span>
             <button onClick={plus}>+</button>
           </CounterContainer>
-          <span>{itemCounter}</span>
-          <Button 
-          disabled={timerBetween} 
-          onClick={() => handleAddToCartButton(id, itemCounter)}
-          style={{ opacity: timerBetween ? '50%' : '100%' }}
+          <Button
+            disabled={timerBetween}
+            onClick={() => handleAddToCartButton(id, itemCounter)}
+            style={{ opacity: timerBetween ? "50%" : "100%" }}
           >
             {buttonText}
           </Button>

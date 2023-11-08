@@ -1,5 +1,4 @@
-"use client"
-import * as React from "react";
+"use client";
 import Button from "../../Button";
 import styled from "styled-components";
 import MenuButton from "./MenuButton";
@@ -82,8 +81,6 @@ const MenuContainer = styled.div<MenuContainerProps>`
       display: none;
     }
   }
-
-  
 `;
 
 export default function MenuOpen({ openMenu, handleClick }: MenuOpenProps) {

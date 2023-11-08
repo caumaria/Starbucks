@@ -9,7 +9,7 @@ export default function Home() {
       <main>
         <CoffeFilter />
         <Shop />
-        <Footer />
+        
       </main>
 
   );

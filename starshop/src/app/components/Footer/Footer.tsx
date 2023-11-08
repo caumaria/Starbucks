@@ -69,7 +69,7 @@ const MiddleSection = styled.div`
   }
 
   @media (max-width: 1000px) {
-    width: 460px;
+
     gap: 3.4rem;
     padding-left: 2.5rem;
     flex-direction: row;

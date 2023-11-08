@@ -4,7 +4,7 @@ import items from "../../data/items.json";
 import ProductCard from "./ProductCard";
 import styled from "styled-components";
 
-const ShopContainer = styled.div`
+export const ShopContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -14,7 +14,7 @@ const ShopContainer = styled.div`
   background: #f2f0eb;
 `;
 
-const CardContainer = styled.section`
+export const CardContainer = styled.section`
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 300px));
   align-items: center;

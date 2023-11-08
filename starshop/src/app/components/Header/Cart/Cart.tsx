@@ -11,7 +11,7 @@ const CartContainer = styled.div`
 `;
 
 const CartButton = styled.button`
-  background-color: white;
+  background-color: inherit;
   border: none;
   display: flex;
   align-items: center;
