@@ -20,8 +20,6 @@ interface MenuContainerProps {
 const MenuContainer = styled.div<MenuContainerProps>`
   background-color: #f2f0eb;
   display: flex;
-  font-family: "LanderGrande";
-  font-size: 2.1rem;
   transition: transform 0.3s ease-in-out;
   transform: ${({ $openMenu }) =>
     $openMenu ? "translateX(0)" : "translateX(-100%)"};
@@ -31,8 +29,7 @@ const MenuContainer = styled.div<MenuContainerProps>`
   line-height: 1.1;
   min-width: 100%;
   min-height: 100%;
-  padding-bottom: 100px;
-  z-index: 99;
+  z-index: 9;
 
   span {
     position: fixed;
@@ -42,10 +39,9 @@ const MenuContainer = styled.div<MenuContainerProps>`
   p {
     cursor: pointer;
     margin: 0;
-    font-size: 0.7rem;
-    font-weight: 600;
-    font-family: "SoDoSans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    line-height: 2rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 3rem;
   }
   ul {
     cursor: pointer;
@@ -57,9 +53,21 @@ const MenuContainer = styled.div<MenuContainerProps>`
     li {
       list-style: none;
       padding: 0.5rem 0;
+      font-weight: 300;
+      font-family: "LanderGrande";
+      line-height: 1;
     }
     @media (max-width: 500px) {
       border: none;
+      width: 100%;
+      font-size: 2.9rem;
+    }
+    button {
+      padding: 1rem 2rem;
+      a {
+        color: white;
+        font-size: 1rem;
+      }
     }
   }
   aside {
@@ -100,7 +108,9 @@ export default function MenuOpen({ openMenu, handleClick }: MenuOpenProps) {
         <li>Minha conta</li>
         <Text>Entrar</Text>
         <Text>Registrar</Text>
-        <Button>Compre Aqui</Button>
+        <Button>
+          <a href="*">Compre Aqui</a>
+        </Button>
       </ul>
 
       <aside>

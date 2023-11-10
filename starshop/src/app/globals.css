@@ -8,7 +8,8 @@
   --secondary-grey: #767676;
 }
 
-html, body {
+html,
+body {
   height: 100vh;
   max-width: 100vw;
   min-width: 320px;

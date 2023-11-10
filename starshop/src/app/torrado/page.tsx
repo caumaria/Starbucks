@@ -17,7 +17,7 @@ export default function Torrado() {
       <CafeContainer>
         <PicContainerPages>
           <TextFilter
-            title="Cafés Torrado Moído"
+            title="Café Torrado Moído"
             description="Aprecie um café delicioso e fresco preparado em sua casa com grãos de cafés selecionados Starbucks®."
           />
           <section>

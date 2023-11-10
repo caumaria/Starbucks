@@ -13,17 +13,21 @@ type CartItemProps = {
 const CartItemContainer = styled.div`
   display: flex;
   gap: 1rem;
-  font-size: 0.75rem;
-  color: var(--main-green);
-  margin: 1rem 0;
-
+  
   img {
     width: 75px;
+  }
+  
+  p:first-child {
+    color: var(--main-green);
+    font-size: 1.1rem;
+    line-height: 28px;
   }
 
   p {
     margin: .4rem 0;
-    font-size: .7rem;
+    font-size: 0.9rem;
+    color: #333;
   }
 `;
 
@@ -31,11 +35,17 @@ const RemoveButton = styled.button`
   background-color: inherit;
   color: var(--secondary-green);
   line-height: 28px;
-  font-size: 0.7rem;
-  font-weight: 550;
+  font-size: 1rem;
+  font-weight: 400;
   border: none;
   text-decoration: underline;
   margin: 0.4rem;
+`;
+
+const ButtonsContainer = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 1rem;
 `;
 
 export function CartItem({ id, quantity }: CartItemProps) {
@@ -51,21 +61,21 @@ export function CartItem({ id, quantity }: CartItemProps) {
       </div>
 
       <div>
-        <b>{item.name}</b>
+        <p>{item.name}</p>
 
         <p>Visualizar detalhes v</p>
 
-        <div>R${item.price}</div>
-        <CenterDiv>
+        <p>R${item.price}</p>
+        <ButtonsContainer>
           <CounterContainer>
             <button onClick={() => decreaseQuantity(id)}>-</button>
-            <button onClick={() => increaseQuantity(id)}>+</button>
             <span>{quantity}</span>
+            <button onClick={() => increaseQuantity(id)}>+</button>
           </CounterContainer>
           <RemoveButton onClick={() => removeItem(item.id)}>
             Remover
           </RemoveButton>
-        </CenterDiv>
+        </ButtonsContainer>
       </div>
     </CartItemContainer>
   );

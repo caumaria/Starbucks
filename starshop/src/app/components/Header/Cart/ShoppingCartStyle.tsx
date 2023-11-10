@@ -7,7 +7,7 @@ export const ShoppingContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  max-width: 460px;
+  max-width: 500px;
   min-width: 320px;
   width: 100%;
   height: 100vh;
@@ -19,12 +19,13 @@ export const ShoppingContainer = styled.div`
 `;
 
 export const ShopContainer = styled.div`
-  height: 100vh;
+  height: 100%;
 
   section {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding: 1rem;
 
     button {
       background: none;
@@ -49,11 +50,10 @@ export const ShopContainer = styled.div`
 
 export const CardWrapper = styled.div`
   overflow-x: auto;
-  padding: 1rem 50px;
-  display: inline-block;
-  height: calc(100vh - 280px) !important;
-  margin: 0 !important;
-  gap: 1rem;
+  padding: 2rem;
+  height: 300px;
+  max-height: 420px;
+  height: 100%;
 `;
 
 export const CartTotal = styled.div`
@@ -63,8 +63,6 @@ export const CartTotal = styled.div`
   flex-direction: column;
   justify-content: center;
   gap: 1rem;
-  padding-top: 1rem;
-  margin-bottom: 1rem;
 
   section {
     font-size: 16px;
@@ -76,6 +74,8 @@ export const CartTotal = styled.div`
 
   button {
     width: 90%;
+    padding: 1rem;
+    font-size: 1rem;
   }
 
   a {

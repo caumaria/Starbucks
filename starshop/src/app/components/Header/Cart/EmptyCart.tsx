@@ -14,7 +14,7 @@ const EmptyCartContainer = styled.section`
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding-top: 1rem;
+    padding: 1rem;
 
     button {
       background: none;
@@ -34,6 +34,15 @@ const EmptyCartContainer = styled.section`
   p {
     color: var(--main-green);
     font-size: 16px;
+    text-align: center;
+  }
+  
+  a > button {
+    font-size: 16px;
+    margin-top: 40px;
+    line-height: 28px;
+    font-weight: 600;
+    padding: 1rem;
   }
 `;
 
@@ -49,7 +58,6 @@ export default function EmptyCart({
       <section>
         <div>
           <h1>Meu Carrinho</h1>
-          <p>0 itens no Carrinho</p>
         </div>
         <button onClick={() => setOpen(!open)}>x</button>
       </section>

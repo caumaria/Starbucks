@@ -47,6 +47,10 @@ const FooterContainer = styled.section`
   div {
     display: flex;
     gap: 2rem;
+
+    img:nth-child(4) {
+      opacity: 0.6;
+    }
   }
 `;
 

@@ -51,7 +51,7 @@ export const ButtonsContainer = styled.div`
 `;
 
 export const CounterContainer = styled.div`
-  gap: .8rem;
+  gap: 1rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -69,8 +69,14 @@ export const CounterContainer = styled.div`
     background: transparent;
     line-height: 30px;
   }
-  :hover {
+  button:hover {
     background-color: var(--secondary-green);
     color: white;
+  }
+
+  span {
+    user-select: none;
+    font-size: 1rem;
+    padding-top: .2rem;
   }
 `;
